@@ -15,7 +15,7 @@ public class SocketApp {
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
             String resp = in.readLine();
-            out.println(String.format("Hi, %s", resp));
+             out.println(String.format("Hi, %s, порт номер %d", resp, port));
 
         } catch (IOException e) {
             e.printStackTrace();
